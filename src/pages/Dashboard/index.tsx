@@ -44,7 +44,6 @@ const Dashboard: React.FC = () => {
     }
     try {
       const response = await api.get<Repository>(`repos/${newRepo}`);
-      console.log(response.data);
       const repository = response.data;
       setRepositories([...repositories, repository]);
       setInputError('');
